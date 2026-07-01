@@ -1,0 +1,36 @@
+server:
+  port: 8099  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  application:
+    name: china-mobile-ai
+  ai:
+    dashscope:
+      api-key: # 填入自己的百炼api-key
+      chat:
+        options:
+          model: qwen-plus
+      client:
+        advisor: DEBUG
+      embedding:
+        options:
+          model: text-embedding-v3 #向量模型
+          dimensions: 1024 #向量维度维度
+#    openai: #openai配置
+#      base-url: https://dashscope.aliyuncs.com/compatible-mode #api地址
+#      api-key: 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
+#      chat:
+#        options:
+#          # model: gpt-3.5-turbo #模型名称
+#          model: qwen-plus #模型名称
+#          # enabled: false #关闭OpenAI配置
+
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG
